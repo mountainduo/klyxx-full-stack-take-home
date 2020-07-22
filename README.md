@@ -33,7 +33,7 @@ The important qualities that **will** be considered are the following:
 #### User Interface Specifications
 For this online storefront, we'll be creating a Single Page Application with Gatsby. Luckily, GatsbyJS makes this pretty easy and doesn't force you to set up `react-router`.  You'll be using modules like `gatsby-link`  to navigate between pages.
 
-<img src="https://i.ibb.co/Xsx8Khn/Screen-Shot-2020-07-23-at-00-18-34.png"></img>
+<img src="https://i.ibb.co/Xsx8Khn/Screen-Shot-2020-07-23-at-00-18-34.png" width="500px"></img>
 
 Above, you can see the (very basic) outline for your interface. Your GatsbyJS site will have 3 necessary pages, the rest of the layout (that is to say the navbar) should be contained in the Gatsby layout file:
 - `Home`:
