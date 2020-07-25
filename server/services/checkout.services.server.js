@@ -10,8 +10,10 @@ let checkoutInfo = {
     "cvv": "",
 };
 
+// get checkout information
 getCheckoutInfo = () => checkoutInfo;
 
+// complete checkout
 submitCheckout = (info) => {
     checkoutInfo = info;
 }

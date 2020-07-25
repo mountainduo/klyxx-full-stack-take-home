@@ -2,6 +2,7 @@ const inventoryService = require('./inventory.services.server');
 
 let cart = [];
 
+// get all items in the cart
 getCart = () => cart;
 
 // add an item to the cart
