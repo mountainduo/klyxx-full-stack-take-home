@@ -14,7 +14,6 @@ const Header = ({ siteTitle }) => (
           to="/"
           style={{
             color: `black`,
-            textDecoration: `none`,
           }}>
           {siteTitle}
         </Link>
@@ -27,7 +26,6 @@ const Header = ({ siteTitle }) => (
               to="/cart"
               style={{
                 color: `black`,
-                textDecoration: `none`,
               }}>
               Cart
             </Link>
