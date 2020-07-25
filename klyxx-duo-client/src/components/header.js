@@ -7,27 +7,34 @@ const Header = ({ siteTitle }) => (
     style={{
       background: `rebeccapurple`,
       marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+    }}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand">
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `black`,
             textDecoration: `none`,
-          }}
-        >
+          }}>
           {siteTitle}
         </Link>
-      </h1>
-    </div>
+      </a>
+      <ul className="navbar-nav mr-auto"></ul>
+      <ul className="navbar-nav mr-right">
+        <li className="nav-item">
+          <a className="nav-link">
+            <Link
+              to="/cart"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}>
+              Cart
+            </Link>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 )
 
