@@ -15,3 +15,8 @@ getCheckoutInfo = () => checkoutInfo;
 submitCheckout = (info) => {
     checkoutInfo = info;
 }
+
+module.exports = {
+    getCheckoutInfo,
+    submitCheckout
+}
