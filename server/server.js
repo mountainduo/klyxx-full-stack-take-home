@@ -17,6 +17,7 @@ app.use(function (req, res, next) {
 });
 
 require('./controllers/checkout.controller.server')(app);
+require('./controllers/inventory.controller.server')(app);
 
 app.listen(process.env.PORT || 8080);
 
