@@ -1,0 +1,8 @@
+[
+  {"_id": "123", "title": "Sticker 1", "price": 5.0, "imageUrl": "https://i.picsum.photos/id/1040/150/150.jpg?hmac=LD5-semfG8UqLGM8UVztw8FErveGNYrFjbOP_yxgl9E"},
+  {"_id": "234", "title": "Sticker 2", "price": 6.0, "imageUrl": "https://i.picsum.photos/id/221/150/150.jpg?hmac=KbYjb_IfD4mt9wGGa9HNMLxzrlj1H8TmpffMX08VwYY"},
+  {"_id": "345", "title": "Sticker 3", "price": 7.0, "imageUrl": "https://i.picsum.photos/id/188/150/150.jpg?hmac=8j3burRytLvGep0zCFbXncqFpoK49Ny8Xft_WJ7Kg1g"},
+  {"_id": "456", "title": "Sticker 4", "price": 5.0, "imageUrl": "https://i.picsum.photos/id/248/150/150.jpg?hmac=35K37r5YSL3_JVdOPsi69XWlm-EbUCKp_pjfbc2lwCw"},
+  {"_id": "567", "title": "Sticker 5", "price": 3.0, "imageUrl": "https://i.picsum.photos/id/670/150/150.jpg?hmac=1dJGMjJipNZ-MJi1c_VbOYPUEe_REOCiU3yLV-WpS8o"},
+  {"_id": "678", "title": "Sticker 6", "price": 5.0, "imageUrl": "https://i.picsum.photos/id/669/150/150.jpg?hmac=d6zH6DBM3_KFXsgTk72psifKdJTpcjQfN-iCIr40wxU"}
+]
