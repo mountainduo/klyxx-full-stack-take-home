@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle="Duo's Sticker Store" />
+      <Header siteTitle="Duo's Sticker Store"/>
       <div
         style={{
           margin: `0 auto`,
@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        <footer className="mt-5">
           Created by Duo Hong; Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>

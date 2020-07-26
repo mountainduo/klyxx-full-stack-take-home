@@ -1,38 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import NavbarComponent from "./navbar";
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand">
-        <Link
-          to="/"
-          style={{
-            color: `black`,
-          }}>
-          {siteTitle}
-        </Link>
-      </a>
-      <ul className="navbar-nav mr-auto"></ul>
-      <ul className="navbar-nav mr-right">
-        <li className="nav-item">
-          <a className="nav-link">
-            <Link
-              to="/cart"
-              style={{
-                color: `black`,
-              }}>
-              Cart
-            </Link>
-          </a>
-        </li>
-      </ul>
-    </nav>
+  <header className="sticky-top">
+    <NavbarComponent siteTitle={siteTitle}/>
   </header>
 )
 
