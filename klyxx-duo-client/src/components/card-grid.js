@@ -1,7 +1,8 @@
 import React from 'react'
 import Card from "./card";
 
-const CardGrid = ({inventory, addToCart}) =>
+// Grid component to show all product cards
+const CardGrid = ({inventory}) =>
   <div className="row">{
     inventory.map(function (item, index) {
       return (

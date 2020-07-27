@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import {GlobalDispatchContext} from "../context/GlobalContextProvider";
 
+// Card component representing information to show about each individual product
 const Card = ({id, title, price, imageUrl}) => {
   const dispatch = useContext(GlobalDispatchContext);
 

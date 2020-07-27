@@ -1,15 +1,16 @@
 import React from 'react'
 import {getItemById} from "../services/InventoryService";
 
-// split up state and dispatch into two providers
+// Split up state and dispatch into two providers for performance and separation of concern
 export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
+// Initial state with no cart items
 const initialState = {
   cart: [],
 }
 
-// reducer dealing with types of cart actions
+// Reducer dealing with types of cart actions
 // code for incrementing/decrementing quantity based on code from this article:
 // https://dev.to/aneeqakhan/building-shopping-cart-actions-and-reducers-with-redux-in5
 function reducer(state, action) {
@@ -51,6 +52,9 @@ function reducer(state, action) {
   }
 }
 
+// Using as wrapper for global state and dispatch. For the purposes of this assignment, cart info is saved on a global
+// state that persists between separate pages. Inspired by:
+// https://dev.to/changoman/gatsby-js-global-state-w-react-context-usereducer-3c1#:~:text=TLDR%3A%20In%20order%20to%20get,around%20any%20components.
 const GlobalContextProvider = ({children}) => {
   const [state, dispatch] = React.useReducer(reducer, initialState)
   return (
@@ -61,40 +65,5 @@ const GlobalContextProvider = ({children}) => {
     </GlobalStateContext.Provider>
   )
 }
-
-// CART HELPER FUNCTIONS
-
-/*const addToCart = async (state, itemid) => {
-  // if cart already contains the item, increase quantity by 1.
-  if (state.cart.some(item => item._id === itemid)) {
-    let quantity = state.cart.filter(item => item._id === itemid)[0].quantity;
-    editQuantityOfItem(state, itemid, quantity + 1)
-    return state;
-  }
-  else {
-    let item = await getItemById(itemid);
-    item['quantity'] = 1;
-    this.setState(prevState => {
-      return ({
-        cart: [
-          ...prevState.cart,
-          item
-        ]
-      })
-    });
-  }
-
-  console.log(this.state.cart)
-}
-
-// edit the quantity of an item in the cart
-const editQuantityOfItem = (state, itemid, newQuantity) => {
-  for (let i = 0; i < state.cart.length; i++) {
-    if (state.cart[i]._id === itemid) {
-      this.state.cart[i].quantity = newQuantity;
-      break;
-    }
-  }
-};*/
 
 export default GlobalContextProvider

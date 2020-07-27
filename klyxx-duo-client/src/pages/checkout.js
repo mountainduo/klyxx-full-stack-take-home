@@ -41,7 +41,6 @@ class CheckoutPage extends React.Component {
   }
 
   render() {
-
     return (
       <Layout>
         <SEO title="Checkout"/>

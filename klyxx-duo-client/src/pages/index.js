@@ -11,7 +11,6 @@ import NavbarComponent from "../components/navbar";
 class IndexPage extends React.Component {
   state = {
     inventory: [],
-    cart: [],
   }
 
   componentDidMount = async () => {
@@ -21,14 +20,12 @@ class IndexPage extends React.Component {
     })
   };
 
-
-
   render() {
     return (
       <Layout>
         <SEO title="Home"/>
         <div className="container">
-          <CardGrid inventory={this.state.inventory} addToCart={this.addToCart}/>
+          <CardGrid inventory={this.state.inventory}/>
         </div>
       </Layout>
     );
