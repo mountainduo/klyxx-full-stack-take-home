@@ -82,7 +82,8 @@ const CartPage = () => {
               to="/checkout"
               style={{
                 color: `white`,
-              }}>
+              }}
+              state={{total: (state.cart.reduce((acc, item) => acc + item.price * item.quantity, 0))}}>
               <button type="button" className="btn btn-success">Checkout</button>
             </Link>
 
