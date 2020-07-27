@@ -1,3 +1,39 @@
+# Duo Hong Take-Home Assignment
+
+Thank you for looking at my work for the Take-Home Assignment. I had a great time learning about GatsbyJS, and I'll likely
+consider using it for future personal projects.
+
+## Client
+In `./klyxx-duo-client` is the GatsbyJS Project. I used the default starter provided by Gatsby. For simple styling,
+I used Bootstrap.
+The file structure is self-explanatory, but I will detail the changes/additions I made to create the website per the assignment specifications.
+
+### Components
+- `navbar.js` contains, as its name suggests, the Navbar Component with the store name and cart links
+- `card-grid.js` contains the CardGrid component and uses the map function on the inventory (which is static on the server side) to display all product cards
+- `card.js` contains the card component that displays individual product information. Clicking on `Add to Cart` on a product card
+adds that product to your cart. Clicking on it any time (and any number of times) after the initial add will increase the quantity
+of that product in your cart.
+
+### Pages
+- `index.js` contains local state for the inventory, which gets passed down to the Card Grid component.
+- `cart.js` The cart page features all functionality described in the assignment instructions
+- `checkout.js` Simple form for checking out
+
+### Global Context Provider
+See `src/context/GlobalContextProvider`. I used React Context API and React Hook useReducer to have a global state that persists among multiple pages in Gatsby.
+Product inventory is kept in a local state and passed down via props, while the product cart is why I have a global state as
+the cart information and functionality is not on the server side. Another key difference is that items in the
+cart have an additional key `quantity` for the amount the user wishes to purchase.
+
+## Server
+
+My ExpressJS server is organized into controllers and services. Controllers handle the API endpoints described in
+the assignment instructions. Services contain functions for the controllers to use to perform the necessary server-side actions.
+
+The `/inventory` route handles GET requests to return all inventory and to return a single product in the inventory
+by product id. 
+
 # Full-stack Intern Take Home
 This repository contains the base code for our standard take home assignment for a full-stack development intern, usually given out after the initial phone screen.
 

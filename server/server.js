@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Allow CORS from different origin, namely localhost:3000
 app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:8000');
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers',
         'Content-Type, X-Requested-With, Origin');
     res.header('Access-Control-Allow-Methods',
@@ -18,7 +18,6 @@ app.use(function (req, res, next) {
 
 require('./controllers/checkout.controller.server')(app);
 require('./controllers/inventory.controller.server')(app);
-require('./controllers/cart.controller.server')(app);
 
 app.listen(process.env.PORT || 8080);
 

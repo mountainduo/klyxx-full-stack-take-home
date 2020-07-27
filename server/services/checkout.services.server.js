@@ -1,12 +1,14 @@
 let checkoutInfo = {
     "_id": "",
-    "first": "",
-    "last": "",
-    "address": "",
+    "firstName": "",
+    "lastName": "",
     "email": "",
-    "phone": "",
+    "street": "",
+    "city": "",
+    "state": "",
+    "zip": "",
     "card": "",
-    "expiration_date": "",
+    "expiration": "",
     "cvv": "",
 };
 
@@ -16,6 +18,7 @@ getCheckoutInfo = () => checkoutInfo;
 // complete checkout
 submitCheckout = (info) => {
     checkoutInfo = info;
+
 }
 
 module.exports = {

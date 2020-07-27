@@ -13,6 +13,7 @@ class IndexPage extends React.Component {
     inventory: [],
   }
 
+  // Set local state upon mounting so we can show all inventory on home page via cards
   componentDidMount = async () => {
     const inventory = await getInventory();
     this.setState({
