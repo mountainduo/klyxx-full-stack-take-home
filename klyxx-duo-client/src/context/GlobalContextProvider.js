@@ -52,8 +52,8 @@ function reducer(state, action) {
   }
 }
 
-// Using as wrapper for global state and dispatch. For the purposes of this assignment, cart info is saved on a global
-// state that persists between separate pages. Inspired by:
+// Using as wrapper for global state and dispatch. See gatsby-ssr.js. For the purposes of this assignment, cart info
+// is saved on a global state that persists between separate pages. Inspired by:
 // https://dev.to/changoman/gatsby-js-global-state-w-react-context-usereducer-3c1#:~:text=TLDR%3A%20In%20order%20to%20get,around%20any%20components.
 const GlobalContextProvider = ({children}) => {
   const [state, dispatch] = React.useReducer(reducer, initialState)
