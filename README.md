@@ -34,6 +34,8 @@ the assignment instructions. Services contain functions for the controllers to u
 The `/inventory` route handles GET requests to return all inventory and to return a single product in the inventory
 by product id. 
 
+`inventory.json` contains the 6 hard-coded products in the store's inventory.
+
 # Full-stack Intern Take Home
 This repository contains the base code for our standard take home assignment for a full-stack development intern, usually given out after the initial phone screen.
 
